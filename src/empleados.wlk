@@ -22,5 +22,8 @@ object baigorria {
 object gimenez {
 	var dinero = 300000
 	method dinero() { return dinero }
-	method pagarA( empleado ) { dinero -= empleado.sueldo() }
+	method pagarA( empleado ) {
+		dinero -= empleado.sueldo()
+		empleado.cobrarSueldo()
+	}
 }
