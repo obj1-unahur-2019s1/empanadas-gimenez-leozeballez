@@ -20,11 +20,15 @@ object galvan {
 		}
 	}
 	method gastar(cuanto){
-		dinero -= cuanto
-		if(dinero<0){
-			deuda -= dinero
-			dinero = 0
-		}
+	if (dinero >= cuanto){
+	 	dinero-=cuanto
+	} else{
+	 	if(dinero > 0){
+	 		deuda+=cuanto - dinero
+	 		dinero = 0
+	 	} else{deuda +=cuanto}
+	}
+	
 	}
 	method totalDinero()=return dinero
 	method totalDeuda()=return deuda

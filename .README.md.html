@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>D:\carlos\educ\obj1\proyectosPrueba\empanadasGimenez\.README.md.html</title>
+<title>/home/ai-34/empanadas-gimenez-leozeballez/.README.md.html</title>
 
 
 <style type="text/css">
@@ -640,45 +640,46 @@ function setDocumentScrollTop(ypos)
 </head>
 <body class="markdown-body">
 <h1> <a id="empanadas-gim&eacute;nez" class="anchor" href="#empanadas-gim%C3%A9nez" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Empanadas Gim&eacute;nez</h1> 
-<p><a href="img/empanadasGimenez.png" target="_blank"><img src="img/empanadasGimenez.png" height="200" width="300" style="max-width:100%;" /></a></p> 
+<p><a href="img/empanadasGimenez.png" target="_blank" rel="noopener noreferrer"><img src="img/empanadasGimenez.png" height="200" width="300" style="max-width:100%;" /></a></p> 
 <h2> <a id="planteo-inicial" class="anchor" href="#planteo-inicial" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Planteo inicial</h2> 
 <p>En &quot;Empanadas Gim&eacute;nez&quot;, un modesto local de delivery de empanadas, tenemos dos empleados:</p> 
 <ul> 
- <li>Gim&eacute;nez, que cobra un sueldo fijo. El valor arranca en 15000 pesos, y despu&eacute;s puede cambiar mes a mes.</li> 
- <li>Baigorria, el joven y esforzado empleado de Gim&eacute;nez, cobra en base a la cantidad de empanadas vendidas (actualmente $ 15 por empanada).</li> 
+ <li>Galv&aacute;n, el empleado de siempre, que cobra un sueldo fijo. El valor arranca en $ 15.000, y despu&eacute;s puede cambiar mes a mes.</li> 
+ <li>Baigorria, el joven y explotado empleado de Gim&eacute;nez, que cobra en base a la cantidad de empanadas vendidas (actualmente $ 15 por empanada).</li> 
 </ul> 
-<p>Un tercer empleado, el se&ntilde;or Galv&aacute;n, es el encargado de pagarle el sueldo a los empleados, y de gestionar el dinero qe se utiliza para esto. Asumimos que Galv&aacute;n arranca con un fondo para sueldos de 300000 pesos. Como los sueldos salen de este fondo, hay que descontar el importe correspondiente cuando Galv&aacute;n le paga a un empleado.</p> 
-<p>Por ahora no vamos a tener en cuenta qu&eacute; hace cada empleado al recibir el dinero, el &uacute;nico efecto que nos interesa del pago es que disminuye el fondo de Galv&aacute;n.</p> 
+<p>El due&ntilde;o, el se&ntilde;or Gim&eacute;nez, es el encargado de pagarle el sueldo a los empleados, y de gestionar el dinero que se utiliza para esto. Asumimos que Gim&eacute;nez arranca con un fondo para sueldos de $ 300.000. Como los sueldos salen de este fondo, hay que descontar el importe correspondiente cuando Gim&eacute;nez le paga a un empleado.</p> 
+<p>Por ahora no vamos a tener en cuenta qu&eacute; hace cada empleado al recibir el dinero, el &uacute;nico efecto que nos interesa del pago es que disminuye el fondo de Gim&eacute;nez.</p> 
 <br /> 
 <h2> <a id="qu&eacute;-hacen-los-empleados-con-lo-que-cobran" class="anchor" href="#qu%C3%A9-hacen-los-empleados-con-lo-que-cobran" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Qu&eacute; hacen los empleados con lo que cobran</h2> 
-<p>Se modifica el m&eacute;todo pagarA(empleado) de Galv&aacute;n de esta forma</p> 
-<pre><code>pagarA(empleado) {
-    dinero -= empleado.sueldo()
-    empleado.cobrarSueldo()
-}
-</code></pre> 
+<p>Se modifica el m&eacute;todo pagarA(empleado) de Gim&eacute;nez de esta forma</p> 
+<div class="highlight highlight-source-js">
+ <pre>method <span class="pl-en">pagarA</span>(<span class="pl-smi">empleado</span>) {
+    dinero <span class="pl-k">-=</span> <span class="pl-smi">empleado</span>.<span class="pl-en">sueldo</span>()
+    <span class="pl-smi">empleado</span>.<span class="pl-en">cobrarSueldo</span>()
+}</pre>
+</div> 
 <ul> 
- <li>Probar haciendo que Galv&aacute;n le pague a Baigorria. Se rompe. &iquest;Por qu&eacute;?</li> 
- <li>&iquest;qu&eacute; m&eacute;todo o m&eacute;todos hay que agregar, en qu&eacute; objeto u objetos, para que Galv&aacute;n le pueda pagar el sueldo a cualquiera de los dos empleados?</li> 
- <li>Agregar esos m&eacute;todos con el siguiente criterio: Gim&eacute;nez cuando cobra el sueldo lo suma a un acumulador de todo lo que cobr&oacute;, agregarle la capacidad de entender el mensaje <code>totalCobrado()</code>. Baigorria no hace nada.</li> 
+ <li>probar haciendo que Gim&eacute;nez le pague a Baigorria. Se rompe. &iquest;Por qu&eacute;?</li> 
+ <li>&iquest;qu&eacute; m&eacute;todo o m&eacute;todos hay que agregar, en qu&eacute; objeto u objetos, para que Gim&eacute;nez le pueda pagar el sueldo a cualquiera de los dos empleados?</li> 
+ <li>agregar esos m&eacute;todos con el siguiente criterio: Baigorria cuando cobra el sueldo lo suma a un acumulador de todo lo que cobr&oacute;, agregarle la capacidad de entender el mensaje <code>totalCobrado()</code>. Galv&aacute;n no hace nada.</li> 
 </ul> 
 <br /> 
-<h2> <a id="manejo-fino-de-las-finanzas-de-baigorria" class="anchor" href="#manejo-fino-de-las-finanzas-de-baigorria" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manejo fino de las finanzas de Baigorria</h2> 
-<p>Modificar el comportamiento de Baigorria para que maneje sus gastos, el dinero que tiene, y su deuda. Cuando Baigorria gasta, se descuenta de su dinero, si no le alcanza aumenta la deuda. Cuando cobra un sueldo, Baigorria paga sus deudas. Si sobra algo, se suma al dinero que tiene. Agregar a Baigorria la capacidad de entender los mensajes: <code>gastar(cuanto)</code>, <code>totalDeuda()</code>, <code>totalDinero()</code>.</p> 
+<h2> <a id="manejo-fino-de-las-finanzas-de-galv&aacute;n" class="anchor" href="#manejo-fino-de-las-finanzas-de-galv%C3%A1n" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manejo fino de las finanzas de Galv&aacute;n</h2> 
+<p>Modificar el comportamiento de Galv&aacute;n para que maneje sus gastos, el dinero que tiene, y su deuda. Cuando Galv&aacute;n gasta, se descuenta de su dinero, si no le alcanza aumenta la deuda. Cuando cobra un sueldo, Galv&aacute;n paga sus deudas. Si sobra algo, se suma al dinero que tiene. Agregar a Galv&aacute;n la capacidad de entender los mensajes: <code>gastar(cuanto)</code>, <code>totalDeuda()</code>, <code>totalDinero()</code>.</p> 
 <p>Tener en cuenta este escenario</p> 
 <ol> 
- <li>Baigorria arranca con 15000 de sueldo, deuda en 0, dinero en 0.</li> 
- <li>Baigorria gasta 4000, <code>totalDeuda()</code> debe ser 4000, <code>totalDinero()</code> debe ser 0.</li> 
- <li>Baigorria gasta otros 8000, <code>totalDeuda()</code> pasa a 12000, <code>totalDinero()</code> sigue en 0.</li> 
- <li>Baigorria cobra, con los 15000 que recibe paga toda su deuda y le sobran 3000 pesos. Por lo tanto, <code>totalDeuda()</code> debe ser 0, y <code>totalDinero()</code> debe ser 3000.</li> 
- <li>Baigorria gasta 25000, cubre 3000 con el dinero que tiene, el resto es deuda. <code>totalDeuda()</code> queda en 22000, <code>totalDinero()</code> en 0.</li> 
- <li>Baigorria cobra, tiene que dedicar los 15000 a pagar deudas, y no le alcanza. Ahora, <code>totalDeuda()</code> pasa a 7000, y <code>totalDinero()</code> a 0.</li> 
+ <li>Galv&aacute;n arranca con 15000 de sueldo, deuda en 0, dinero en 0.</li> 
+ <li>Galv&aacute;n gasta 4000, <code>totalDeuda()</code> debe ser 4000, <code>totalDinero()</code> debe ser 0.</li> 
+ <li>Galv&aacute;n gasta otros 8000, <code>totalDeuda()</code> pasa a 12000, <code>totalDinero()</code> sigue en 0.</li> 
+ <li>Galv&aacute;n cobra, con los 15000 que recibe paga toda su deuda y le sobran 3000 pesos. Por lo tanto, <code>totalDeuda()</code> debe ser 0, y <code>totalDinero()</code> debe ser 3000.</li> 
+ <li>Galv&aacute;n gasta 25000, cubre 3000 con el dinero que tiene, el resto es deuda. <code>totalDeuda()</code> queda en 22000, <code>totalDinero()</code> en 0.</li> 
+ <li>Galv&aacute;n cobra, tiene que dedicar los 15000 a pagar deudas, y no le alcanza. Ahora, <code>totalDeuda()</code> pasa a 7000, y <code>totalDinero()</code> a 0.</li> 
 </ol> 
 <br /> 
 <h1> <a id="conceptos-vistos-en-el-ejemplo" class="anchor" href="#conceptos-vistos-en-el-ejemplo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Conceptos vistos en el ejemplo</h1> 
 <ul> 
  <li>Modelar objetos</li> 
- <li>Polimorfismo entre Baigorria y Gim&eacute;nez.</li> 
+ <li>Polimorfismo entre Baigorria y Galv&aacute;n.</li> 
  <li>Para pensar: &iquest;qu&eacute; mensajes entiende cada uno? &iquest;qu&eacute; efecto produce al utilizar ambos objetos en el REPL?</li> 
 </ul>
 </body>
